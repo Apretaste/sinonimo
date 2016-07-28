@@ -91,7 +91,7 @@ class Sinonimo extends Service
 		{
 			foreach (json_decode($response) as $synonym)
 			{
-				$synonyms[] = htmlentities(utf8_decode($synonym->valor));
+				$synonyms[] = $synonym->valor;
 			}
 		}
 		return $synonyms;
