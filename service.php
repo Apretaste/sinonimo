@@ -69,7 +69,7 @@ class Sinonimo extends Service
 	 */
 	public function getSynonyms($word)
 	{
-		$accessKey = "MoIso6nqps7XB2SDqZ3Kx_CNOfga";
+		$accessKey = "WcSnnf_8poEwPrqfRUwRHBjCLx0a";
 		$url = "https://store.apicultur.com/api/sinonimosporpalabra/1.0.0/$word";
 		
 		$ch = curl_init();
