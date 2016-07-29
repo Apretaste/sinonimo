@@ -1,10 +1,10 @@
 <h1>Sin&oacute;nimos de '{$word}'</h1>
 <p>A continuaci&oacute;n te mostramos los sin&oacute;nimos encontrados. Tambi&eacute;n puedes buscar en Google y Wikipedia para obtener m&aacute;s informaci&oacute;n.</p>
 <table width="100%">
-	<tr><th><b>{$word}</b></th>
+	<tr><th align="left"><b>{$word}</b></th>
 	<th></th>
-	<th>{button href="GOOGLE {$word}" caption="googlear" size="small" color="grey"}</th>
-	<th>{button href="WIKIPEDIA {$word}" caption="leer en wiki" size="small" color="grey"}</th>
+	<th align="left">{button href="GOOGLE {$word}" caption="googlear" size="small" color="grey"}</th>
+	<th align="left">{button href="WIKIPEDIA {$word}" caption="leer en wiki" size="small" color="grey"}</th>
 	</tr>
 	{foreach item=item from=$syns}
 	<tr>
