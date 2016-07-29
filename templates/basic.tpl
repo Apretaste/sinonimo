@@ -1,6 +1,11 @@
 <h1>Sin&oacute;nimos de '{$word}'</h1>
-<p>A continuaci&oacute;n te mostramos los sin&oacute;nimos encontrados y una lista de acciones que puedes hacer con ellos, como buscar la palabra en Internet mediante Google, buscarla en Wikipedia o buscar m&aacute;s sin&oacute;nimos.</p>
+<p>A continuaci&oacute;n te mostramos los sin&oacute;nimos encontrados. Tambi&eacute;n puedes buscar en Google y Wikipedia para obtener m&aacute;s informaci&oacute;n.</p>
 <table width="100%">
+	<tr><th><b>{$word}</b></th>
+	<th></th>
+	<th>{button href="GOOGLE {$word}" caption="googlear" size="small" color="grey"}</th>
+	<th>{button href="WIKIPEDIA {$word}" caption="leer en wiki" size="small" color="grey"}</th>
+	</tr>
 	{foreach item=item from=$syns}
 	<tr>
 		<td>{$item}</td>
@@ -10,5 +15,3 @@
 	</tr>
 	{/foreach}
 </table>
-{space10}
-<center>{button href="GOOGLE {$word}" caption="Buscar <b>{$word}</b> en Google" size="large"} {button href="WIKIPEDIA {$word}" caption="Buscar <b>{$word}</b> en Wikipedia" size="large" color="grey"}</center>
