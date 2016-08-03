@@ -3,8 +3,8 @@
 <table width="100%">
 	<tr><th align="left"><b>{$word}</b></th>
 	<th></th>
-	<th align="left">{button href="GOOGLE {$word}" caption="googlear" size="small" color="grey"}</th>
-	<th align="left">{button href="WIKIPEDIA {$word}" caption="leer en wiki" size="small" color="grey"}</th>
+	<th align="right">{button href="GOOGLE {$word}" caption="googlear" size="small" color="grey"}</th>
+	<th align="right">{button href="WIKIPEDIA {$word}" caption="leer en wiki" size="small" color="grey"}</th>
 	</tr>
 	{foreach item=item from=$syns}
 	<tr>

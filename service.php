@@ -87,13 +87,17 @@ class Sinonimo extends Service
 		curl_close($ch);
 		
 		$synonyms = array();
-		if ($http_status == 200)
-		{
-			foreach (json_decode($response) as $synonym)
+		$responses = @json_decode($response);
+		
+		if (is_array($responses))
+			if ($http_status == 200)
 			{
-				$synonyms[] = $synonym->valor;
+				foreach ($responses as $synonym)
+				{
+					$synonyms[] = $synonym->valor;
+				}
 			}
-		}
+		
 		return $synonyms;
 	}
 }
