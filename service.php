@@ -43,7 +43,7 @@ class Sinonimo extends Service
 		$response = new Response();
 		if (isset($syns[0]))
 		{
-			$response->setResponseSubject("Sinonimos de -$word-");
+			$response->setResponseSubject("Sinonimos de la palabra $word");
 			$response->createFromTemplate('basic.tpl', array(
 				'syns' => $syns,
 				'word' => $word
@@ -51,7 +51,7 @@ class Sinonimo extends Service
 		}
 		else
 		{
-			$response->setResponseSubject("No se encontraron sinonimos para -$word-");
+			$response->setResponseSubject("No se encontraron sinonimos para la palabra $word"); 
 			$response->createFromTemplate('nosyn.tpl', array(
 				'word' => $word
 			));

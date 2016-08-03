@@ -1,4 +1,4 @@
-<h1>Sin&oacute;nimos de '{$word}'</h1>
+<h1>Sin&oacute;nimos de la palabra <i>{$word}</i></h1>
 <p>A continuaci&oacute;n te mostramos los sin&oacute;nimos encontrados. Tambi&eacute;n puedes buscar en Google y Wikipedia para obtener m&aacute;s informaci&oacute;n.</p>
 <table width="100%">
 	<tr><th align="left"><b>{$word}</b></th>
