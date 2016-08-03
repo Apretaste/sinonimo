@@ -9,8 +9,8 @@
 	{foreach item=item from=$syns}
 	<tr>
 		<td>{$item}</td>
-		<td align="right">{button href="SINONIMO {$item}" caption="ver sinonimo" size="small" color="blue"}</td>
-		<td align="right">{button href="GOOGLE {$item}" caption="googlear" size="small" color="green"}</td>
+		<td align="right">{button href="SINONIMO {$item}" caption="ver sinonimo" size="small" color="green"}</td>
+		<td align="right">{button href="GOOGLE {$item}" caption="googlear" size="small" color="grey"}</td>
 		<td align="right">{button href="WIKIPEDIA {$item}" caption="leer en wiki" size="small" color="grey"}</td>
 	</tr>
 	{/foreach}
