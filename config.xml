@@ -1,6 +1,8 @@
 <service>
 	<serviceName>sinonimo</serviceName>
-	<serviceAlias>sinonimos</serviceAlias>
+	<serviceAliases>
+		<alias>sinonimos</alias>
+	</serviceAliases>
 	<serviceDescription>Devuelve una lista de sinonimos de una palabra</serviceDescription>
 	<creatorEmail>kumahavana@gmail.com</creatorEmail>
 	<serviceCategory>academico</serviceCategory>
