@@ -3,7 +3,7 @@
 	<serviceAliases>
 		<alias>sinonimos</alias>
 	</serviceAliases>
-	<serviceDescription>Devuelve una lista de sinonimos de una palabra</serviceDescription>
+	<serviceDescription>Devuelve una lista de sinonimos para una palabra</serviceDescription>
 	<creatorEmail>kumahavana@gmail.com</creatorEmail>
 	<serviceCategory>academico</serviceCategory>
 	<serviceUsage>
