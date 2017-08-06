@@ -63,41 +63,34 @@ class Sinonimo extends Service
 	/**
 	 * Get a list of synonyms for a word in Spanish
 	 *
-	 * @author salvipascual
-	 * @param String $word
+	 * @author kumahacker
+	 * @param String $word        	
 	 * @return array
 	 */
 	public function getSynonyms($word)
 	{
-		$accessKey = "WcSnnf_8poEwPrqfRUwRHBjCLx0a";
-		$url = "https://store.apicultur.com/api/sinonimosporpalabra/1.0.0/$word";
-
+		
+		$url = "https://www.sinonimosonline.com/$word/";
 		$ch = curl_init();
-
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-			'Accept: application/json',
-			'Authorization: Bearer ' . $accessKey
-		));
-
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		$response = curl_exec($ch);
-		$http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 		curl_close($ch);
-
+		
+		$s = 'class="sinonimo">';
+		$p = 0;
 		$synonyms = array();
-		$responses = @json_decode($response);
-
-		if (is_array($responses))
-			if ($http_status == 200)
-			{
-				foreach ($responses as $synonym)
-				{
-					$synonyms[] = $synonym->valor;
-				}
-			}
-
+		do {
+			$p = strpos($response, $s, $p);
+			if ($p===false)
+				break;
+			$p += strlen($s);
+			$p1 = strpos($response, '</a>', $p);
+			$word = substr($response, $p, $p1-$p);
+			$synonyms[] = $word;;
+		} while (true);
+		
 		return $synonyms;
 	}
 }
